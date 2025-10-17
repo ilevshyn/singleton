@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import java.util.concurrent.CountDownLatch;
 
 public class Test_AppConfig_5 {
-    /*
+
     private static final int THREADS = 1000;
     private static AppConfig[] instances = new AppConfig[THREADS];
 
@@ -25,5 +25,4 @@ public class Test_AppConfig_5 {
                 1,
                 java.util.Arrays.stream(instances).distinct().count());
     }
-    //*/
 }

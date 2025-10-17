@@ -9,11 +9,11 @@ import java.util.HashMap;
 
 public class AppConfig {
 
-    private static AppConfig instance;
+    private static volatile AppConfig instance; //volatile to ensure that threads read the same instance
 
     private HashMap<String, Object> config;
 
-    public static AppConfig getInstance(){
+    public static synchronized AppConfig getInstance(){ //synchronized to ensure that only one thread may execute this method
         if(instance==null){
             instance=new AppConfig();
         }
